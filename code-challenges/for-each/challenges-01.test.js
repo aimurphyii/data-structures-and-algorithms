@@ -76,7 +76,8 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  arr.forEach(callback(num,arr))
+  arr.forEach(callback);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,12 +118,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
+  let output=[];
   availableItems.forEach( function(value, i) {
-    if (value.available===true){
-    return value.name;
-    }
+    if (availableItems[i]["available"]===true){
+      output.push(availableItems[i]["name"]);}
   })
-  return availableItems;
+  return output;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
