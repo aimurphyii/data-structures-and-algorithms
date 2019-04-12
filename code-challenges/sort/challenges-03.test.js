@@ -58,7 +58,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 const alphabetizeBetter = (arr) => {
   // Solution code here...
   arr.sort(function (a, b) {
-    return a.toLowerCase().localeCompare(b.toLowerCase());
+    return a.localeCompare(b);
   });
   return arr;
 };
@@ -94,7 +94,12 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
- 
+  for (let i=0; i<arr.length;i++){
+    (arr[i]).toString();
+    }; 
+  arr.sort(function(a, b){
+    return a.length - b.length});
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -118,7 +123,7 @@ const people = [
 const sortPeople = (arr) => {
   // Solution code here...
   arr.sort(function (a, b) {
-    return a.lastName - b.lastName;
+    return (a.lastName).localeCompare(b.lastName);
   });
   return arr;
 };
@@ -135,6 +140,15 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  arr.sort(function (a, b) {
+    return (a.lastName).localeCompare(b.lastName);
+  });
+  arr.sort(function(a, b){return a.age - b.age});
+  arr.sort(function(a,b){
+    return a.firstName.localeCompare(b.firstName);
+  });
+  // console.log(arr);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
