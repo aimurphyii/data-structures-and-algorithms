@@ -26,7 +26,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  return arr.filter( v => (v.match(/[aeiou]/ig)));
+  return arr.filter( v => v.match(/[aeiou]/ig));
 };
 
 
@@ -40,7 +40,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-  return arr.filter(v=>(!forbiddenValues.includes(v)));
+  return arr.filter(v=>!forbiddenValues.includes(v));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -100,11 +100,7 @@ const getStatName = (arr, minBaseStat) => {
   let name = arr.filter(function (n, i) {
     return n.baseStat > minBaseStat;
   });
-  let filtered = [];
-  name.forEach(function (n, i) {
-    filtered.push(Object.values(n.stat)[1]);
-  });
-  return filtered;
+  return name.map(n=>Object.values(n.stat)[1]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,6 +154,8 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  return arr.filter(n=> !n.children)
+
 };
 
 /* ------------------------------------------------------------------------------------------------
