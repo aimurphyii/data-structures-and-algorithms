@@ -100,7 +100,8 @@ const getStatName = (arr, minBaseStat) => {
   let name = arr.filter(function (n, i) {
     return n.baseStat > minBaseStat;
   });
-  return name.map(n=>Object.values(n.stat)[1]);
+  return name.map(n=>n.stat.name);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
