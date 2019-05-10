@@ -154,8 +154,8 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  for(let i=arr.length;i>=0;i--)
-  if(arr[i]%2===0){arr.splice(i,1);}
+  for(let i=arr.length;i>=0;i--){
+  if(arr[i]%2===0){arr.splice(i,1);}}
   // console.log(arr);
   return arr;
 };
