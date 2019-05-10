@@ -94,11 +94,8 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
-  for (let i=0; i<arr.length;i++){
-    (arr[i]).toString();
-    }; 
   arr.sort(function(a, b){
-    return a.length - b.length});
+  (a.toString()).length - (b.toString()).length});
   return arr;
 };
 
@@ -125,6 +122,7 @@ const sortPeople = (arr) => {
   arr.sort(function (a, b) {
     return (a.lastName).localeCompare(b.lastName);
   });
+
   return arr;
 };
 
@@ -140,6 +138,7 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+// you can also just shorten -- return arr.sort() instead of returning afterward
   arr.sort(function (a, b) {
     return (a.lastName).localeCompare(b.lastName);
   });
@@ -149,7 +148,9 @@ const sortPeopleBetter = (arr) => {
   });
   // console.log(arr);
   return arr;
-};
+// (a.last !== b. last){
+//   return a>b ? 1:-1;
+// }};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
