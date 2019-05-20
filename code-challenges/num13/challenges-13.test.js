@@ -62,6 +62,7 @@ const onlyOddChars = (str) => {
   }
   // console.log(x);
   return x.toString().replace(/,/g,'');;
+  // 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,7 +129,13 @@ const unenrollBrook = (arr) => {
   //     console.log(arr[i][j].includes('Brook'));
   //     // arr.splice(arr[i][j][].includes('Brook'),1);
   //   }
-  // }
+  // }map then filter then includes
+  let brook = arr.map(v=>v.filter(val=>!val.includes('Brook')));
+  // console.log(bro);
+  // let ok = bro.filter(val=>!val.includes('Brook'));
+  // console.log(ok);
+  return brook;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
