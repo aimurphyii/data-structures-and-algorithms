@@ -97,15 +97,15 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (arr) => {
   // Solution code here...
-  // let string = arr.split('');
-  // let reversed =[];
-  // string.reduce(function(accumulator,value,idx) { 
-  //   accumulator = value;
-  // reversed.unshift(accumulator);
-  // },0);
-  // return reversed.join('');
+  let string = arr.split('');
+  let reversed =[];
+  string.reduce(function(accumulator,value,idx) { 
+    accumulator = value;
+  reversed.unshift(accumulator);
+  },0);
+  return reversed.join('');
 
-  return arr.spilt('').reduce((acc,current)=>current+acc,'');
+  // return arr.spilt('').reduce((acc,current)=>current+acc,'');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -183,16 +183,16 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
-  // let total = arr.reduce( function(accumulator,value,idx) { 
-  //   accumulator = accumulator+value;
-  //   return accumulator;
-  // }, 0);
-  // return total/(arr.length);
+  let total = arr.reduce( function(accumulator,value,idx) { 
+    accumulator = accumulator+value;
+    return accumulator;
+  }, 0);
+  return total/(arr.length);
 
-return{
-  count:acc.count+1,
-  sum: acc.sum+current//10:44
-}
+// return{
+//   count:acc.count+1,
+//   sum: acc.sum+current//10:44
+// }
 };
 
 /* ------------------------------------------------------------------------------------------------
